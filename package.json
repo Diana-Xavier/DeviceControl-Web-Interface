@@ -1,0 +1,16 @@
+{
+  "name": "MyApp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies":{
+  	"johnny-five":"latest",
+  	"express":"latest",
+  	"socket.io":"latest"
+  	},
+  "author": "Diana",
+  "license": "ISC"
+}
