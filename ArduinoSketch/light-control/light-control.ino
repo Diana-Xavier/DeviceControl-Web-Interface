@@ -7,16 +7,15 @@ void setup() {
 
 // the loop function runs over and over again forever
 void loop() {
-    while (Serial.available()) {
-      Serial.println("serial is available");
-      int input = Serial.read()-'0';
-      Serial.println(input);
+    while (Serial.available()) {      
+      int input = Serial.read()-'0';     
       if(input == 1){ // end character for led
        digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)
-       Serial.println('Y');  
+       Serial.println('1');  
       }else if(input == 0){
         digitalWrite(13, LOW);   // turn the LED on (LOW is the voltage level)
-        Serial.println('N');  
+        Serial.println('0');  
       }
    }
 }
+

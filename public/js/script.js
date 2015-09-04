@@ -13,12 +13,13 @@ console.log("hello");
 		});
     });
 	
-	socket.on('lightStatus', function(data) {
-		console.log("data");
-		if(data === 'Y'){
-			$('#status').append("Light is ON");
-		}else if(data === 'N'){
-			$('#status').append("Light id OFF");
+	socket.on('data', function(data) {
+		var result = data.trim();
+		console.log("result"+result);
+		if(result === '1'){
+			$('#status').html("Light is ON");
+		}else if(result === '0'){
+			$('#status').html("Light is OFF");
 		}
     });
 });

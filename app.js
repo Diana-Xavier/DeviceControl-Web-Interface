@@ -36,12 +36,10 @@ io.listen(httpServer).on('connection', function (socket) {
 			serialPort.write(data + 0);
 		}
     });
+	
+    serialPort.on('data', function(data) {  
+       socket.emit('data',data);
+    });  
+
 });
  
-serialPort.on("open", function (socket) {
-    console.log('open');
-    serialPort.on('data', function(data) {  
-	   console.log("response data"+data);	
-       
-    });  
-});
